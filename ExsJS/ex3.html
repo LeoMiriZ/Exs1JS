@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+
+    <style>
+        .mar {
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #000;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button type="button" onclick="adicionar()">
+        Preencher Tabela
+    </button>
+
+    <div class="mar" id="divpai">
+
+    </div>
+
+    <script>
+
+        function adicionar() {
+
+            let pessoas = [
+                {
+                    id: 1,
+                    nome: "André",
+                    email: "andre@espm.br",
+                    idade: 36,
+                    cargo: "Professor"
+                }, {
+                    id: 2,
+                    nome: "Marcos",
+                    email: "marcos@espm.br",
+                    idade: 46,
+                    cargo: "Professor"
+                }, {
+                    id: 3,
+                    nome: "Julio",
+                    email: "julio@espm.br",
+                    idade: 32,
+                    cargo: "Professor"
+                }, {
+                    id: 4,
+                    nome: "Rodrigo",
+                    email: "rodrigo@espm.br",
+                    idade: 55,
+                    cargo: "Professor"
+                }, {
+                    id: 5,
+                    nome: "Bernardo",
+                    email: "bernardo@espm.br",
+                    idade: 25,
+                    cargo: "Aluno"
+                }, {
+                    id: 6,
+                    nome: "Pedro",
+                    email: "pedro@espm.br",
+                    idade: 18,
+                    cargo: "Aluno"
+                }, {
+                    id: 7,
+                    nome: "João",
+                    email: "joao@espm.br",
+                    idade: 36,
+                    cargo: "Funcionário"
+                }, {
+                    id: 8,
+                    nome: "Gabriel",
+                    email: "gabe@espm.br",
+                    idade: 22,
+                    cargo: "Aluno"
+                }, {
+                    id: 9,
+                    nome: "Leonardo",
+                    email: "leo@espm.br",
+                    idade: 47,
+                    cargo: "Professor"
+                }, {
+                    id: 10,
+                    nome: "Thales",
+                    email: "thales@espm.br",
+                    idade: 21,
+                    cargo: "Aluno"
+                }
+
+            ]
+
+            let divpai = document.getElementById("divpai");
+
+            let html = `
+					<table>
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Nome</th>
+								<th>E-mail</th>
+                                <th>Idade</th>
+                                <th>Cargo</th>
+							</tr>
+						</thead>
+						<tbody>
+				`;
+
+            for (let i = 0; i < pessoas.length; i++) {
+
+                let pessoa = pessoas[i];
+
+                html += `
+						<tr>
+							<td>${pessoa.id}</td>
+
+							<td>${pessoa.nome}</td>
+
+							<td>${pessoa.email}</td>
+
+                            <td>${pessoa.idade}</td>
+
+                            <td>${pessoa.cargo}</td>
+						</tr>
+					`;
+            }
+
+            html += `
+						</tbody>
+					</table>
+				`;
+
+            divpai.innerHTML = html;
+
+
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

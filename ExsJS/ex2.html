@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+
+<body>
+
+    <div>
+
+        <label for="inputsenha">
+            Senha:
+        </label>
+
+        <input type="text" id="inputsenha" />
+
+    </div>
+
+    <div>
+
+        </br>
+
+        <button type="button" onclick="printar(1)">
+            1
+        </button>
+
+        <button type="button" onclick="printar(2)">
+            2
+        </button>
+
+        <button type="button" onclick="printar(3)">
+            3
+        </button>
+
+        </br>
+
+        <button type="button" onclick="printar(4)">
+            4
+        </button>
+
+        <button type="button" onclick="printar(5)">
+            5
+        </button>
+
+        <button type="button" onclick="printar(6)">
+            6
+        </button>
+
+        </br>
+
+        <button type="button" onclick="printar(7)">
+            7
+        </button>
+
+        <button type="button" onclick="printar(8)">
+            8
+        </button>
+
+        <button type="button" onclick="printar(9)">
+            9
+        </button>
+
+        </br>
+
+        <button type="button" onclick="printar(0)">
+            0
+        </button>
+
+        <button type="button" onclick="validar()">
+
+            Validar
+
+        </button>
+
+    </div>
+
+    <script>
+
+        function printar(numero) {
+
+            let inputsenha = document.getElementById("inputsenha");
+
+            if (inputsenha.value === "") {
+
+                inputsenha.value = numero;
+
+                return;
+
+            } else {
+
+                inputsenha.value += numero;
+
+            }
+
+
+
+        }
+
+        function validar() {
+
+            let inputsenha = document.getElementById("inputsenha");
+
+            let res = document.getElementById("res");
+
+            if (inputsenha.value === "1234") {
+
+                res.textContent = "Senha validada";
+            } else {
+
+                res.textContent = "Senha inválida";
+
+            }
+
+
+        }
+
+
+
+    </script>
+
+    <div>
+
+        <h1 id="res">
+
+        </h1>
+        
+    </div>
+
+
+
+
+
+</body>
+
+</html>

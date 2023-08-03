@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+
+    <style>
+        .resultado {
+
+            margin-top: 10px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+
+        <label for="inputValorA">
+
+            Valor A
+
+        </label>
+
+        <input type="number" id="inputValorA" />
+
+    </div>
+
+    </br>
+
+    <div>
+
+        <label for="inputValorB">
+
+            Valor B
+
+        </label>
+
+        <input type="number" id="inputValorB" />
+
+    </div>
+
+    </br>
+
+    <div>
+
+        <label for="inputValorC">
+
+            Valor C
+
+        </label>
+
+        <input type="number" id="inputValorC" />
+
+    </div>
+
+    </br>
+
+    <div>
+
+        <label for="inputValorD">
+
+            Valor D
+
+        </label>
+
+        <input type="number" id="inputValorD" />
+
+    </div>
+
+    </br>
+
+    <div>
+
+        <label for="inputValorE">
+
+            Valor E
+
+        </label>
+
+        <input type="number" id="inputValorE" />
+
+    </div>
+
+    </br>
+
+    <button type="button" onclick="verificar()">
+
+        Verificar Faltante
+
+    </button>
+
+    <div class="resultado" id="inputres"></div>
+
+
+    <script>
+
+        function verificar() {
+
+            let inputValorA = document.getElementById("inputValorA");
+
+            let inputValorB = document.getElementById("inputValorB");
+
+            let inputValorC = document.getElementById("inputValorC");
+
+            let inputValorD = document.getElementById("inputValorD");
+
+            let inputValorE = document.getElementById("inputValorE");
+
+            let inputres = document.getElementById("inputres");
+
+            let valorA = parseInt(inputValorA.value);
+
+            let valorB = parseInt(inputValorB.value);
+
+            let valorC = parseInt(inputValorC.value);
+
+            let valorD = parseInt(inputValorD.value);
+
+            let valorE = parseInt(inputValorE.value);
+
+            if (isNaN(valorA) || 1 > valorA || valorA > 6) {
+
+                inputres.textContent = "Card inválido";
+
+                return;
+
+            } else if (isNaN(valorB) || 1 > valorB || valorB > 6) {
+
+                inputres.textContent = "Card inválido";
+
+                return;
+
+            } else if (isNaN(valorC) || 1 > valorC || valorC > 6) {
+
+                inputres.textContent = "Card inválido";
+
+                return;
+
+            } else if (isNaN(valorD) || 1 > valorD || valorD > 6) {
+
+                inputres.textContent = "Card inválido";
+
+                return;
+
+            } else if (isNaN(valorE) || 1 > valorE || valorE > 6) {
+
+                inputres.textContent = "Card inválido";
+
+                return;
+            }
+
+
+            let res;
+
+            res = 21 - (valorA + valorB + valorC + valorD + valorE);
+
+            inputres.textContent = res;
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
